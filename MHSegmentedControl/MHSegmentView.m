@@ -95,7 +95,9 @@
         //创建pagerView
         MHPagerView *pagerView = [[MHPagerView alloc] init];
         pagerView.frame = [self getPagerViewFrameWithIndex:i];
+        pagerView.backgroundColor = [UIColor colorWithRed:arc4random()%225/225.0 green:arc4random()%225/225.0  blue:arc4random()%225/225.0  alpha:1];
         
+        [self.contentScrollView addSubview:pagerView];
     }
     
     
@@ -104,8 +106,14 @@
 }
 
 - (CGRect)getPagerViewFrameWithIndex:(NSInteger)index {
+    NSInteger total = self.titlesArray.count;
     
-    return CGRectZero;
+    CGSize size = self.frame.size;
+    CGFloat x = ((float)index/total)*size.width;
+    
+    CGRect rect = CGRectMake(x, HeaderHeight, size.width/total, size.height-HeaderHeight);
+    
+    return rect;
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {

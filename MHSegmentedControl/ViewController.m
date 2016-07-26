@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MHSegmentView *seg = [MHSegmentView segmentViewWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 300) sectionTitles:@[@"第一",@"第二",@"第三"] contentBackGroundColor:[UIColor lightGrayColor]];
+    MHSegmentView *seg = [MHSegmentView segmentViewWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 300) sectionTitles:@[@"第一",@"第二",@"第三"] contentBackGroundColor:[UIColor clearColor]];
     
     [self.view addSubview:seg];
     
