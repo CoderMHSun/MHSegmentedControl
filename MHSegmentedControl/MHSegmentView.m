@@ -10,14 +10,18 @@
 #import "HeaderButtonsView.h"
 #import "MHPagerView.h"
 
-@interface MHSegmentView ()<HeaderButtonsViewDelegate>
+@interface MHSegmentView ()<HeaderButtonsViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) HeaderButtonsView *headerButtonsView;
 
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
+@property (nonatomic, strong) NSMutableArray *pagerViewArray;
 
 @property (nonatomic, strong) NSArray *titlesArray;
+
+/** 这里存放三个tableView的数据*/
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -46,10 +50,25 @@
 }
 
 - (void)setup {
+    self.dataArray = [NSArray array];
+    self.pagerViewArray = [NSMutableArray array];
     [self addSubview:self.headerButtonsView];
     [self addSubview:self.contentScrollView];
     
-    
+    NSLog(@"%@",NSStringFromCGRect(self.contentScrollView.frame));
+}
+
+
+#pragma mark - **************** public method
+- (void)reload {
+    for (MHPagerView *pagerView in _pagerViewArray) {
+        [pagerView reloadData];
+    }
+}
+
+- (void)setDataArray:(NSArray *)dataArray {
+    _dataArray = dataArray;
+    [self reload];
 }
 
 #pragma mark - **************** HeaderButtonsView delegate
@@ -75,6 +94,10 @@
     if (!_contentScrollView) {
         _contentScrollView = [[UIScrollView alloc] init];
         _contentScrollView.showsHorizontalScrollIndicator = YES;
+        _contentScrollView.showsVerticalScrollIndicator = NO;
+        _contentScrollView.frame = CGRectMake(0, HeaderHeight, self.frame.size.width, self.frame.size.height-HeaderHeight);
+        _contentScrollView.pagingEnabled = YES;
+        _contentScrollView.bounces = NO;
     }
     return _contentScrollView;
 }
@@ -82,8 +105,24 @@
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     
+    _contentScrollView.frame = CGRectMake(0, HeaderHeight, self.frame.size.width, self.frame.size.height-HeaderHeight);
+    
     _contentScrollView.contentSize = CGSizeMake(frame.size.width*self.titlesArray.count, frame.size.height);
     
+    for (int i = 0; i<_titlesArray.count; i++) {
+        //创建pagerView
+        MHPagerView *pagerView = [[MHPagerView alloc] init];
+        pagerView.frame = [self getPagerViewFrameWithIndex:i];
+        pagerView.backgroundColor = [UIColor colorWithRed:arc4random()%225/225.0 green:arc4random()%225/225.0  blue:arc4random()%225/225.0  alpha:1];
+        pagerView.tag = i;
+        pagerView.delegate = self;
+        pagerView.dataSource = self;
+        
+        [pagerView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+        
+        [_pagerViewArray addObject:pagerView];
+        [self.contentScrollView addSubview:pagerView];
+    }
 }
 
 - (void)setTitlesArray:(NSArray *)titlesArray {
@@ -91,27 +130,15 @@
     
     _headerButtonsView.sectionTitles = titlesArray;
     
-    for (int i = 0; i<titlesArray.count; i++) {
-        //创建pagerView
-        MHPagerView *pagerView = [[MHPagerView alloc] init];
-        pagerView.frame = [self getPagerViewFrameWithIndex:i];
-        pagerView.backgroundColor = [UIColor colorWithRed:arc4random()%225/225.0 green:arc4random()%225/225.0  blue:arc4random()%225/225.0  alpha:1];
-        
-        [self.contentScrollView addSubview:pagerView];
-    }
-    
-    
-    
     
 }
 
 - (CGRect)getPagerViewFrameWithIndex:(NSInteger)index {
-    NSInteger total = self.titlesArray.count;
     
     CGSize size = self.frame.size;
-    CGFloat x = ((float)index/total)*size.width;
+    CGFloat x = ((float)index)*size.width;
     
-    CGRect rect = CGRectMake(x, HeaderHeight, size.width/total, size.height-HeaderHeight);
+    CGRect rect = CGRectMake(x, 0, size.width, size.height);
     
     return rect;
 }
@@ -120,5 +147,21 @@
     [super setBackgroundColor:backgroundColor];
     _contentScrollView.backgroundColor = backgroundColor;
 }
+
+
+//>>>>>>>>>>>>>>>>代理方法>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#pragma mark - tableViewdelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return ((NSArray*)(_dataArray[tableView.tag])).count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *data = _dataArray[tableView.tag];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = data[indexPath.row];
+    return cell;
+}
+
 
 @end

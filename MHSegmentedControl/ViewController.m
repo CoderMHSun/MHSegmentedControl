@@ -22,6 +22,9 @@
     
     [self.view addSubview:seg];
     
+    
+    [seg setDataArray:@[@[@"111",@"222"],@[@"333",@"444"],@[@"555",@"666",@"777"]]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

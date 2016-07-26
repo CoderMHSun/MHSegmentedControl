@@ -12,4 +12,8 @@
 
 + (instancetype)segmentViewWithFrame:(CGRect)frame sectionTitles:(NSArray*)titlesArray contentBackGroundColor:(UIColor *)color;
 
+- (void)reload;
+
+- (void)setDataArray:(NSArray*)dataArray;
+
 @end
