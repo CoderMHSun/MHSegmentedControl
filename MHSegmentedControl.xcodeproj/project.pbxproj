@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60F86C581E5FFECA009C2D9A /* HeaderButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F86C551E5FFECA009C2D9A /* HeaderButtonsView.m */; };
+		60F86C591E5FFECA009C2D9A /* MHSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F86C571E5FFECA009C2D9A /* MHSegmentView.m */; };
+		79AE3C8A3C6FB149DE28CA20 /* libPods-MHSegmentedControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B41423EAA614ACF79E77F5B /* libPods-MHSegmentedControl.a */; };
 		ECC912D11D460B7A006B0897 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC912D01D460B7A006B0897 /* main.m */; };
 		ECC912D41D460B7A006B0897 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC912D31D460B7A006B0897 /* AppDelegate.m */; };
 		ECC912D71D460B7A006B0897 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC912D61D460B7A006B0897 /* ViewController.m */; };
@@ -15,9 +18,6 @@
 		ECC912DF1D460B7A006B0897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC912DD1D460B7A006B0897 /* LaunchScreen.storyboard */; };
 		ECC912EA1D460B7A006B0897 /* MHSegmentedControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC912E91D460B7A006B0897 /* MHSegmentedControlTests.m */; };
 		ECC912F51D460B7A006B0897 /* MHSegmentedControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC912F41D460B7A006B0897 /* MHSegmentedControlUITests.m */; };
-		ECC913041D460C29006B0897 /* MHSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC913031D460C29006B0897 /* MHSegmentView.m */; };
-		ECC913071D460CC8006B0897 /* HeaderButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC913061D460CC8006B0897 /* HeaderButtonsView.m */; };
-		ECC9130A1D46205D006B0897 /* MHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC913091D46205D006B0897 /* MHPagerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290AF039A74882B1B5122547 /* Pods-MHSegmentedControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHSegmentedControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHSegmentedControl/Pods-MHSegmentedControl.release.xcconfig"; sourceTree = "<group>"; };
+		60F86C541E5FFECA009C2D9A /* HeaderButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderButtonsView.h; sourceTree = "<group>"; };
+		60F86C551E5FFECA009C2D9A /* HeaderButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderButtonsView.m; sourceTree = "<group>"; };
+		60F86C561E5FFECA009C2D9A /* MHSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSegmentView.h; sourceTree = "<group>"; };
+		60F86C571E5FFECA009C2D9A /* MHSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSegmentView.m; sourceTree = "<group>"; };
+		7B41423EAA614ACF79E77F5B /* libPods-MHSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MHSegmentedControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D5086A6B4E47849A1EDEB5 /* Pods-MHSegmentedControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHSegmentedControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHSegmentedControl/Pods-MHSegmentedControl.debug.xcconfig"; sourceTree = "<group>"; };
 		ECC912CC1D460B7A006B0897 /* MHSegmentedControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHSegmentedControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC912D01D460B7A006B0897 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECC912D21D460B7A006B0897 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,12 +61,6 @@
 		ECC912F01D460B7A006B0897 /* MHSegmentedControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHSegmentedControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC912F41D460B7A006B0897 /* MHSegmentedControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHSegmentedControlUITests.m; sourceTree = "<group>"; };
 		ECC912F61D460B7A006B0897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECC913021D460C29006B0897 /* MHSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSegmentView.h; sourceTree = "<group>"; };
-		ECC913031D460C29006B0897 /* MHSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSegmentView.m; sourceTree = "<group>"; };
-		ECC913051D460CC8006B0897 /* HeaderButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderButtonsView.h; sourceTree = "<group>"; };
-		ECC913061D460CC8006B0897 /* HeaderButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderButtonsView.m; sourceTree = "<group>"; };
-		ECC913081D46205D006B0897 /* MHPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHPagerView.h; sourceTree = "<group>"; };
-		ECC913091D46205D006B0897 /* MHPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHPagerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79AE3C8A3C6FB149DE28CA20 /* libPods-MHSegmentedControl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60F86C531E5FFECA009C2D9A /* MHSegmentView */ = {
+			isa = PBXGroup;
+			children = (
+				60F86C561E5FFECA009C2D9A /* MHSegmentView.h */,
+				60F86C571E5FFECA009C2D9A /* MHSegmentView.m */,
+				60F86C541E5FFECA009C2D9A /* HeaderButtonsView.h */,
+				60F86C551E5FFECA009C2D9A /* HeaderButtonsView.m */,
+			);
+			path = MHSegmentView;
+			sourceTree = "<group>";
+		};
+		ABAE96638BA6DCF49775CF40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9D5086A6B4E47849A1EDEB5 /* Pods-MHSegmentedControl.debug.xcconfig */,
+				290AF039A74882B1B5122547 /* Pods-MHSegmentedControl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCB683A52A34591D9A92FD98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B41423EAA614ACF79E77F5B /* libPods-MHSegmentedControl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ECC912C31D460B7A006B0897 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +124,8 @@
 				ECC912E81D460B7A006B0897 /* MHSegmentedControlTests */,
 				ECC912F31D460B7A006B0897 /* MHSegmentedControlUITests */,
 				ECC912CD1D460B7A006B0897 /* Products */,
+				ABAE96638BA6DCF49775CF40 /* Pods */,
+				CCB683A52A34591D9A92FD98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,16 +142,11 @@
 		ECC912CE1D460B7A006B0897 /* MHSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
+				60F86C531E5FFECA009C2D9A /* MHSegmentView */,
 				ECC912D21D460B7A006B0897 /* AppDelegate.h */,
 				ECC912D31D460B7A006B0897 /* AppDelegate.m */,
 				ECC912D51D460B7A006B0897 /* ViewController.h */,
 				ECC912D61D460B7A006B0897 /* ViewController.m */,
-				ECC913021D460C29006B0897 /* MHSegmentView.h */,
-				ECC913031D460C29006B0897 /* MHSegmentView.m */,
-				ECC913051D460CC8006B0897 /* HeaderButtonsView.h */,
-				ECC913061D460CC8006B0897 /* HeaderButtonsView.m */,
-				ECC913081D46205D006B0897 /* MHPagerView.h */,
-				ECC913091D46205D006B0897 /* MHPagerView.m */,
 				ECC912D81D460B7A006B0897 /* Main.storyboard */,
 				ECC912DB1D460B7A006B0897 /* Assets.xcassets */,
 				ECC912DD1D460B7A006B0897 /* LaunchScreen.storyboard */,
@@ -162,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECC912F91D460B7A006B0897 /* Build configuration list for PBXNativeTarget "MHSegmentedControl" */;
 			buildPhases = (
+				7B5407AF5D40089547D4957D /* [CP] Check Pods Manifest.lock */,
 				ECC912C81D460B7A006B0897 /* Sources */,
 				ECC912C91D460B7A006B0897 /* Frameworks */,
 				ECC912CA1D460B7A006B0897 /* Resources */,
+				E7AD1ED6037C59BEF3EE6F81 /* [CP] Embed Pods Frameworks */,
+				0C4F9A763FCCA4361EE49B51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,17 +310,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C4F9A763FCCA4361EE49B51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHSegmentedControl/Pods-MHSegmentedControl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B5407AF5D40089547D4957D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MHSegmentedControl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7AD1ED6037C59BEF3EE6F81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHSegmentedControl/Pods-MHSegmentedControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECC912C81D460B7A006B0897 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECC912D71D460B7A006B0897 /* ViewController.m in Sources */,
-				ECC913041D460C29006B0897 /* MHSegmentView.m in Sources */,
+				60F86C581E5FFECA009C2D9A /* HeaderButtonsView.m in Sources */,
 				ECC912D41D460B7A006B0897 /* AppDelegate.m in Sources */,
-				ECC9130A1D46205D006B0897 /* MHPagerView.m in Sources */,
+				60F86C591E5FFECA009C2D9A /* MHSegmentView.m in Sources */,
 				ECC912D11D460B7A006B0897 /* main.m in Sources */,
-				ECC913071D460CC8006B0897 /* HeaderButtonsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +507,7 @@
 		};
 		ECC912FA1D460B7A006B0897 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9D5086A6B4E47849A1EDEB5 /* Pods-MHSegmentedControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MHSegmentedControl/Info.plist;
@@ -438,6 +519,7 @@
 		};
 		ECC912FB1D460B7A006B0897 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 290AF039A74882B1B5122547 /* Pods-MHSegmentedControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MHSegmentedControl/Info.plist;
@@ -514,6 +596,7 @@
 				ECC912FB1D460B7A006B0897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECC912FC1D460B7A006B0897 /* Build configuration list for PBXNativeTarget "MHSegmentedControlTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +605,7 @@
 				ECC912FE1D460B7A006B0897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECC912FF1D460B7A006B0897 /* Build configuration list for PBXNativeTarget "MHSegmentedControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +614,7 @@
 				ECC913011D460B7A006B0897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,27 +9,31 @@
 #import "ViewController.h"
 #import "MHSegmentView.h"
 
-@interface ViewController ()
+@interface ViewController ()<MHSegmentViewDelegate>
 
 @end
 
 @implementation ViewController
 
+#define RandomColor (arc4random()%255)/255.0
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MHSegmentView *seg = [MHSegmentView segmentViewWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 300) sectionTitles:@[@"第一",@"第二",@"第三"] contentBackGroundColor:[UIColor clearColor]];
-    
+    MHSegmentView *seg = [MHSegmentView segmentViewWithTitles:@[@"第一块",@"第二块",@"第三块"] delegate:self];
+    seg.frame = CGRectMake(0, 20, 320, 480);
     [self.view addSubview:seg];
     
-    
-    [seg setDataArray:@[@[@"111",@"222"],@[@"333",@"444"],@[@"555",@"666",@"777"]]];
-    
+        
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (UIView *)segmentView:(MHSegmentView *)segmentView index:(NSInteger)index {
+    
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor colorWithRed:RandomColor green:RandomColor blue:RandomColor alpha:1];
+    return view;
+    
 }
 
 @end
