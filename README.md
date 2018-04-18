@@ -1,7 +1,7 @@
 # MHSegmentedControl #
 顶部菜单，不可滑动
 
-# 具体使用方法：#
+# 具体使用方法：
 
 <pre><code>
 #define RandomColor (arc4random()%255)/255.0
