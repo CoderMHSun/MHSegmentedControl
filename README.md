@@ -3,9 +3,9 @@
 
 # 具体使用方法：#
 
-#define RandomColor (arc4random()%255)/255.0
+<#define RandomColor (arc4random()%255)/255.0
 
-> - (void)viewDidLoad {
+ - (void)viewDidLoad {
     [super viewDidLoad];
     
     MHSegmentView *seg = [MHSegmentView segmentViewWithTitles:@[@"第一块",@"第二块",@"第三块"] delegate:self];
@@ -19,5 +19,5 @@
     view.backgroundColor = [UIColor colorWithRed:RandomColor green:RandomColor blue:RandomColor alpha:1];
     return view;
     
-}
-> 
+}>
+
