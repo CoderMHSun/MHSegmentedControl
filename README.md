@@ -3,7 +3,8 @@
 
 # 具体使用方法：#
 
-<#define RandomColor (arc4random()%255)/255.0
+<pre><code>
+#define RandomColor (arc4random()%255)/255.0
 
  - (void)viewDidLoad {
     [super viewDidLoad];
@@ -19,5 +20,6 @@
     view.backgroundColor = [UIColor colorWithRed:RandomColor green:RandomColor blue:RandomColor alpha:1];
     return view;
     
-}>
+}
+</code></pre>
 
